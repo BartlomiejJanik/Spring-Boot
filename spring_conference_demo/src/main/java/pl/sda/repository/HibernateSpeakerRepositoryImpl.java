@@ -1,10 +1,11 @@
 package pl.sda.repository;
 
+import org.springframework.stereotype.Repository;
 import pl.sda.model.Speaker;
 
 import java.util.ArrayList;
 import java.util.List;
-
+@Repository("speakerRepository")
 public class HibernateSpeakerRepositoryImpl implements SpeakerRepostiory {
 
     @Override
