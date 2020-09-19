@@ -12,6 +12,7 @@ import pl.sda.service.SpeakerServiceImpl;
 public class AppConfig {
 
     @Bean(name = "speakerService")
+    @Scope(value = "prototype")
     public SpeakerService getSpeakerService(){
         SpeakerServiceImpl service = new SpeakerServiceImpl();
         service.setSpeakerRepository(getSpeakerRepository());
@@ -19,6 +20,7 @@ public class AppConfig {
     }
 
     @Bean(name="speakerRepository")
+    @Scope(value = "singleton")
     public SpeakerRepostiory getSpeakerRepository(){
         return new HibernateSpeakerRepositoryImpl();
     }
