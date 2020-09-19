@@ -6,4 +6,8 @@
 
     <bean name="speakerRepositiory" class="pl.sda.repository.HibernateSpeakerRepositoryImpl"/>
 
+    <bean name="speakerService" class="pl.sda.service.SpeakerServiceImpl">
+        <property name="speakerRepository" ref="speakerRepositiory"/>
+    </bean>
+
 </beans>
