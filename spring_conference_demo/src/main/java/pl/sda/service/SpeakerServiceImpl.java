@@ -9,6 +9,13 @@ import java.util.List;
 public class SpeakerServiceImpl implements SpeakerService {
     private SpeakerRepositoryImpl speakerRepository ;
 
+    public SpeakerServiceImpl() {
+    }
+
+    public SpeakerServiceImpl(SpeakerRepositoryImpl speakerRepository) {
+        System.out.println("Constructor injection");
+        this.speakerRepository = speakerRepository;
+    }
 
     @Override
     public List<Speaker> findAll() {
@@ -16,6 +23,7 @@ public class SpeakerServiceImpl implements SpeakerService {
 
     }
     public void setSpeakerRepository(HibernateSpeakerRepositoryImpl speakerRepository) {
+        System.out.println("Set injection");
         this.speakerRepository = speakerRepository;
     }
 }
