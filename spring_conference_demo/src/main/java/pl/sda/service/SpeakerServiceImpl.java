@@ -13,16 +13,8 @@ import java.util.List;
 
 @Service("speakerService")
 public class SpeakerServiceImpl implements SpeakerService {
-
     private SpeakerRepostiory speakerRepository;
     private SpeakerProcessor speakerProcessor;
-
-    @Autowired
-    public SpeakerServiceImpl(SpeakerRepostiory speakerRepository, SpeakerProcessor speakerProcessor) {
-        this.speakerRepository = speakerRepository;
-        this.speakerProcessor = speakerProcessor;
-        System.out.println("Constructor injection"+speakerRepository+ speakerProcessor);
-    }
 
     public SpeakerServiceImpl() {
     }
@@ -42,12 +34,12 @@ public class SpeakerServiceImpl implements SpeakerService {
         return speakerList;
     }
 
-
+    @Autowired
     public void setSpeakerProcessor(SpeakerProcessor speakerProcessor) {
         this.speakerProcessor = speakerProcessor;
     }
 
-
+    @Autowired
     public void setSpeakerRepository(SpeakerRepostiory speakerRepository) {
         System.out.println("Set injection");
         this.speakerRepository = speakerRepository;
