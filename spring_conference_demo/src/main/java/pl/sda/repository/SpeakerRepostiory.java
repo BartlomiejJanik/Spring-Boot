@@ -4,6 +4,6 @@ import pl.sda.model.Speaker;
 
 import java.util.List;
 
-public interface SpeakerRepositoryImpl {
+public interface SpeakerRepostiory {
     List<Speaker> findAll();
 }
