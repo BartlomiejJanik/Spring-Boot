@@ -17,4 +17,8 @@ public class SpeakerService {
         return speakerRepository.findAll();
     }
 
+    public List<Speaker> saveAll(List<Speaker> speakerList){
+        return speakerRepository.saveAll(speakerList);
+    }
+
 }
