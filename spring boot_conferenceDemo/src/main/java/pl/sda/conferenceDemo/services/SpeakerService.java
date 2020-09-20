@@ -18,7 +18,7 @@ public class SpeakerService {
     }
 
     public List<Speaker> saveAll(List<Speaker> speakerList){
-        return speakerRepository.saveAll(speakerList);
+        return (List<Speaker>) speakerRepository.saveAll(speakerList);
     }
 
 }
