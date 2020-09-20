@@ -43,7 +43,14 @@ public class MainRestController {
     @ResponseBody
     public Speaker getSpeakerById(@PathVariable(value = "speakerId") long userId) {
         System.out.println("SPEAKER ID: " + userId);
+        return speakerService.findById(userId);
+    }
+    @GetMapping("/getSpeaker")
+    @ResponseBody
+    public Speaker getSpeakerByIdFromQuery(@RequestParam long id) {
+        System.out.println("SPEAKER ID PARAM: " + id);
         return null;
     }
+
 
 }
