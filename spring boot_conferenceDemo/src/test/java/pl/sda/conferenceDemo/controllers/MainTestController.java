@@ -38,4 +38,11 @@ public class MainTestController {
                 .andReturn().getResponse().getContentAsString();
         System.out.println(responseBody);
     }
+
+    @Test
+    public void shouldReturnBadRequestWhenSpeakerIdIsNotANumber() throws Exception {
+        String userId ="123a";
+        this.mockMvc.perform(MockMvcRequestBuilders.get("/rest/getSpeaker/"+userId))
+                .andDo(print()).andExpect(MockMvcResultMatchers.status().isBadRequest());
+    }
 }
