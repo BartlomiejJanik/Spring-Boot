@@ -12,4 +12,5 @@ public interface SpeakerRepository  extends CrudRepository<Speaker,Long> {
     List<Speaker> findAll();
 
 
+
 }
