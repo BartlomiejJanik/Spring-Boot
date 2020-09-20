@@ -3,11 +3,7 @@ package pl.sda;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
-import pl.sda.repository.HibernateSpeakerRepositoryImpl;
-import pl.sda.repository.SpeakerRepostiory;
-import pl.sda.service.SpeakerService;
-import pl.sda.service.SpeakerServiceImpl;
+import pl.sda.processor.SpeakerProcessor;
 
 @Configuration
 @ComponentScan({"pl.sda"})

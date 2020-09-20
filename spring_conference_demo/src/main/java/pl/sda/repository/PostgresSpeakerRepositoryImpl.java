@@ -6,8 +6,10 @@ import pl.sda.model.Speaker;
 
 import java.util.ArrayList;
 import java.util.List;
+
 @Repository("speakerRepository")
-public class HibernateSpeakerRepositoryImpl implements SpeakerRepostiory {
+@Profile("dev")
+public class PostgresSpeakerRepositoryImpl implements SpeakerRepostiory {
 
     @Override
     public List<Speaker> findAll(){
@@ -15,8 +17,8 @@ public class HibernateSpeakerRepositoryImpl implements SpeakerRepostiory {
         List<Speaker> list = new ArrayList<>();
 
         Speaker speaker = new Speaker();
-        speaker.setFirstName("Adam");
-        speaker.setLastName("Szczęsny");
+        speaker.setFirstName("Eugenia");
+        speaker.setLastName("Jaroczka");
 
         list.add(speaker);
 
